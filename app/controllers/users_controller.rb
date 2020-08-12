@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     if @user.save
       login!
       render json: {
-        status: created,
+        status: "created",
         user: @user
       }
     else
