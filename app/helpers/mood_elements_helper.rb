@@ -1,0 +1,2 @@
+module MoodElementsHelper
+end
