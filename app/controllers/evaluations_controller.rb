@@ -35,7 +35,7 @@ class EvaluationsController < ApplicationController
 
   private
 
-  def
-    params.require(:evaluation).permit(:evaluation)
+  def evaluation_params
+    params.require(:evaluation).permit(:evaluation, :mood_element_id)
   end
 end
