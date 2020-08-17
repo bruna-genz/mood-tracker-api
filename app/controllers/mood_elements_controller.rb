@@ -23,7 +23,7 @@ class MoodElementsController < ApplicationController
     else
       render json: {
         status: 500,
-        emood_elements: ['no mood elements found']
+        mood_elements: ['no mood elements found']
       }
     end
   end
