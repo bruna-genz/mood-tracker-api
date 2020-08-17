@@ -4,7 +4,8 @@ class EvaluationsController < ApplicationController
     if @evaluation.save
       render json: {
         status: "created",
-        evaluation: @evaluation
+        evaluation: @evaluation,
+        moodElementName: find_mood_element(evaluation_params[:mood_element_id])
       }
     else
       render json: {
@@ -37,5 +38,10 @@ class EvaluationsController < ApplicationController
 
   def evaluation_params
     params.require(:evaluation).permit(:evaluation, :mood_element_id)
+  end
+
+  def find_mood_element(id)
+    mood_element = MoodElement.find(id)
+    mood_element_name = mood_element.name
   end
 end
