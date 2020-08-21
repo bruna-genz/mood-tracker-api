@@ -16,7 +16,7 @@ class EvaluationsController < ApplicationController
   end
 
   def index 
-    @evaluations = current_user.evaluations
+    @evaluations = current_user ? current_user.evaluations : null
     if @evaluations 
       @evaluations.each do |evaluation| 
         evaluation[:mood_element_name] = find_mood_element(evaluation.mood_element_id)
