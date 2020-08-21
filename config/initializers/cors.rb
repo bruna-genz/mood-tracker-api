@@ -3,7 +3,7 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
     origins 'https://ohmymood.netlify.app/'
   
     resource '*',
-      headers: :any,
+      headers: 'Access-Control-Allow-Origin',
       methods: [:get, :post, :delete],
       credentials: true
   end
