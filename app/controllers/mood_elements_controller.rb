@@ -3,7 +3,7 @@ class MoodElementsController < ApplicationController
     @mood_element = MoodElement.new(mood_element_params)
     if @mood_element.save
       render json: {
-        status: "created",
+        status: 'created',
         mood_element: @mood_element
       }
     else

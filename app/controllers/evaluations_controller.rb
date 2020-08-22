@@ -4,8 +4,8 @@ class EvaluationsController < ApplicationController
     if @evaluation.save
       @evaluation[:mood_element_name] = find_mood_element(evaluation_params[:mood_element_id])
       render json: {
-        status: "created",
-        evaluation: @evaluation,
+        status: 'created',
+        evaluation: @evaluation
       }
     else
       render json: {
@@ -15,10 +15,10 @@ class EvaluationsController < ApplicationController
     end
   end
 
-  def index 
+  def index
     @evaluations = current_user ? current_user.evaluations : nil
-    if @evaluations 
-      @evaluations.each do |evaluation| 
+    if @evaluations
+      @evaluations.each do |evaluation|
         evaluation[:mood_element_name] = find_mood_element(evaluation.mood_element_id)
       end
       render json: {
@@ -45,6 +45,6 @@ class EvaluationsController < ApplicationController
 
   def find_mood_element(id)
     mood_element = MoodElement.find(id)
-    mood_element_name = mood_element.name
+    mood_element.name
   end
 end

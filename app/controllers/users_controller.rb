@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     if @user.save
       login!
       render json: {
-        status: "created",
+        status: 'created',
         user: @user
       }
     else
@@ -17,7 +17,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    if @user 
+    if @user
       render json: {
         user: @user
       }
