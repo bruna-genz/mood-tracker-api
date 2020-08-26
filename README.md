@@ -1,4 +1,4 @@
-# Facebook Clone
+# OhMyMood! API
 
 ## Table of Contents
 

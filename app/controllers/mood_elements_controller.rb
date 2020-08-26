@@ -8,7 +8,7 @@ class MoodElementsController < ApplicationController
       }
     else
       render json: {
-        status: 500,
+        status: 422,
         errors: @user.errors.full_messages
       }
     end

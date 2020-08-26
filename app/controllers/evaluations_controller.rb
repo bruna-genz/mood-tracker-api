@@ -9,7 +9,7 @@ class EvaluationsController < ApplicationController
       }
     else
       render json: {
-        status: 500,
+        status: 422,
         errors: @evaluation.errors.full_messages
       }
     end
