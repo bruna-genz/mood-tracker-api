@@ -18,7 +18,7 @@ module MoodTrackerApi
 
 
     config.middleware.use ActionDispatch::Cookies
-    config.middleware.use ActionDispatch::Session::CookieStor
+    config.middleware.use ActionDispatch::Session::CookieStore
 
   end
 end
