@@ -3,7 +3,7 @@ module SessionsHelper
     session[:user_id] = @user.id
   end
 
-  def is_logged_in?
+  def user_logged_in?
     !session[:user_id].nil?
   end
 
