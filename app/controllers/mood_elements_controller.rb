@@ -8,9 +8,8 @@ class MoodElementsController < ApplicationController
       }
     else
       render json: {
-        status: 422,
         errors: @user.errors.full_messages
-      }
+      }, status: 422
     end
   end
 
@@ -22,9 +21,8 @@ class MoodElementsController < ApplicationController
       }
     else
       render json: {
-        status: 500,
         mood_elements: ['no mood elements found']
-      }
+      }, status: 500
     end
   end
 

@@ -9,9 +9,8 @@ class EvaluationsController < ApplicationController
       }
     else
       render json: {
-        status: 422,
         errors: @evaluation.errors.full_messages
-      }
+      }, status: 422
     end
   end
 
@@ -26,9 +25,8 @@ class EvaluationsController < ApplicationController
       }
     else
       render json: {
-        status: 500,
         errors: 'no evaluations found for current user'
-      }
+      }, status: 500
     end
   end
 
