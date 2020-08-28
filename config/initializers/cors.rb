@@ -16,4 +16,13 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
       methods: [:get, :post, :delete],
       credentials: true
   end
+
+  allow do
+    origins 'https://ohmymood.herokuapp.com/'
+  
+    resource '*',
+      headers: :any,
+      methods: [:get, :post, :delete],
+      credentials: true
+  end
 end
