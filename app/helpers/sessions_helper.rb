@@ -1,6 +1,11 @@
 module SessionsHelper
   def login!
-    session[:user_id] = @user.id
+    session[:user_id] = {
+      value: @user.id,
+      path: '/',
+      secure: true,
+      samesite: none
+    }
   end
 
   def user_logged_in?
