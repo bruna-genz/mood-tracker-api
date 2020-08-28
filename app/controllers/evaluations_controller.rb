@@ -26,7 +26,7 @@ class EvaluationsController < ApplicationController
     else
       render json: {
         errors: 'no evaluations found for current user'
-      }, status: 500
+      }
     end
   end
 
