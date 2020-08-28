@@ -4,7 +4,7 @@ module SessionsHelper
       value: @user.id,
       path: '/',
       secure: true,
-      samesite: none
+      samesite: 'none'
     }
   end
 
