@@ -41,7 +41,7 @@ Rack::Utils.module_eval do
     end
 
     if key == '_mood-tracker-api'
-      same_site = '; SameSite=None; Secure'
+      same_site = '; SameSite=Lax; Secure'
     end
 
     nil
