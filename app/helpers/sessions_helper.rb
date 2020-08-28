@@ -1,9 +1,6 @@
 module SessionsHelper
   def login!
-    session[:user_id] = {
-      value: @user.id,
-      same_site: :none
-    }
+    session[:user_id] = @user.id
   end
 
   def user_logged_in?
