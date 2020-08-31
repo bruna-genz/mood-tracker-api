@@ -1,5 +1,5 @@
 class EvaluationsController < ApplicationController
-  before_action :find_current_user, only: [:create]
+  before_action :find_current_user, only: [:create, :index]
 
   def create
     @evaluation = @current_user.evaluations.build(evaluation_params)
@@ -18,7 +18,7 @@ class EvaluationsController < ApplicationController
   end
 
   def index
-    @evaluations = current_user ? current_user.evaluations : nil
+    @evaluations = @current_user ? @current_user.evaluations : nil
     if @evaluations
       @evaluations.each do |evaluation|
         evaluation[:mood_element_name] = find_mood_element(evaluation.mood_element_id)
