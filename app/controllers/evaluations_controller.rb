@@ -1,5 +1,5 @@
 class EvaluationsController < ApplicationController
-  before_action :find_current_user, only: [:create, :index]
+  before_action :find_current_user, only: [:create]
 
   def create
     @evaluation = current_user.evaluations.build(evaluation_params)
