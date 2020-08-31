@@ -2,7 +2,8 @@ class EvaluationsController < ApplicationController
   before_action :find_current_user, only: [:create]
 
   def create
-    @evaluation = current_user.evaluations.build(evaluation_params)
+    @evaluation = @current_user.evaluations.build(evaluation_params)
+    p evaluation_params
     if @evaluation.save
       @evaluation[:mood_element_name] = find_mood_element(evaluation_params[:mood_element_id])
       render json: {
@@ -50,7 +51,7 @@ class EvaluationsController < ApplicationController
 
   def find_current_user
     if current_user.nil?
-      current_user = User.find(evaluation_params[:user_id])
+      @current_user = current_user ? current_user : User.find(evaluation_params[:user_id])
     end
   end
 end
