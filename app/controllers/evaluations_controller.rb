@@ -1,7 +1,6 @@
 class EvaluationsController < ApplicationController
-
   def create
-    @current_user = current_user ? current_user : User.find(evaluation_params[:user_id])
+    @current_user = find_current_user(evaluation_params[:user_id])
     @evaluation = @current_user.evaluations.build(evaluation_params)
     p evaluation_params
     if @evaluation.save
@@ -18,7 +17,7 @@ class EvaluationsController < ApplicationController
   end
 
   def index
-    @current_user = current_user ? current_user : User.find(params[:user_id])
+    @current_user = find_current_user(params[:user_id])
     @evaluations = @current_user ? @current_user.evaluations : nil
     if @evaluations
       @evaluations.each do |evaluation|
@@ -48,5 +47,9 @@ class EvaluationsController < ApplicationController
   def find_mood_element(id)
     mood_element = MoodElement.find(id)
     mood_element.name
+  end
+
+  def find_current_user(id)
+    current_user ? current_user : User.find(id)
   end
 end
