@@ -1,4 +1,6 @@
 class EvaluationsController < ApplicationController
+  before_action :find_current_user, only: [:create, :index]
+
   def create
     @evaluation = current_user.evaluations.build(evaluation_params)
     if @evaluation.save
@@ -38,11 +40,17 @@ class EvaluationsController < ApplicationController
   private
 
   def evaluation_params
-    params.require(:evaluation).permit(:evaluation, :mood_element_id)
+    params.require(:evaluation).permit(:evaluation, :mood_element_id, :currentUser)
   end
 
   def find_mood_element(id)
     mood_element = MoodElement.find(id)
     mood_element.name
+  end
+
+  def find_current_user
+    if current_user.nil?
+      current_user = User.find(params[:currentUser])
+    end
   end
 end
