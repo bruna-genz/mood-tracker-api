@@ -40,7 +40,7 @@ class EvaluationsController < ApplicationController
   private
 
   def evaluation_params
-    params.require(:evaluation).permit(:evaluation, :mood_element_id, :currentUser)
+    params.require(:evaluation).permit(:evaluation, :mood_element_id, :user_id)
   end
 
   def find_mood_element(id)
@@ -50,7 +50,7 @@ class EvaluationsController < ApplicationController
 
   def find_current_user
     if current_user.nil?
-      current_user = User.find(params[:currentUser])
+      current_user = User.find(params[:user_id])
     end
   end
 end
