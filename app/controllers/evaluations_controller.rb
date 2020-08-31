@@ -50,6 +50,6 @@ class EvaluationsController < ApplicationController
   end
 
   def find_current_user(id)
-    current_user ? current_user : User.find(id)
+    current_user || User.find(id)
   end
 end
