@@ -2,13 +2,13 @@
 
 ## Table of Contents
 
-- [About](https://github.com/bruna-genz/mood-tracker-api/README.md#about)
-- [Built with](https://github.com/bruna-genz/mood-tracker-api/README.md#built-with)
-- [Installation](https://github.com/bruna-genz/mood-tracker-api/README.md#installation)
-  - [Prerequisites](https://github.com/bruna-genz/mood-tracker-api/README.md#prerequisites)
-  - [Downloading and installing steps](https://github.com/bruna-genz/mood-tracker-api/README.md#downloading-and-installing-steps)
-- [Author](https://github.com/bruna-genz/mood-tracker-api/README.md#author)
-- [Acknowledgments](https://github.com/bruna-genz/mood-tracker-api/README.md#acknowledgements)
+- [About](https://github.com/bruna-genz/mood-tracker-api#about)
+- [Built with](https://github.com/bruna-genz/mood-tracker-api#built-with)
+- [Installation](https://github.com/bruna-genz/mood-tracker-api#installation)
+  - [Prerequisites](https://github.com/bruna-genz/mood-tracker-api#prerequisites)
+  - [Downloading and installing steps](https://github.com/bruna-genz/mood-tracker-api#downloading-and-installing-steps)
+- [Author](https://github.com/bruna-genz/mood-tracker-api#author)
+- [Acknowledgments](https://github.com/bruna-genz/mood-tracker-api#acknowledgements)
 
 ## About
 
