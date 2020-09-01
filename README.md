@@ -1,24 +1,71 @@
-# README
+# OhMyMood! API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Table of Contents
 
-Things you may want to cover:
+- [About](https://github.com/bruna-genz/mood-tracker-api/README.md#about)
+- [Built with](https://github.com/bruna-genz/mood-tracker-api/README.md#built-with)
+- [Installation](https://github.com/bruna-genz/mood-tracker-api/README.md#installation)
+  - [Prerequisites](https://github.com/bruna-genz/mood-tracker-api/README.md#prerequisites)
+  - [Downloading and installing steps](https://github.com/bruna-genz/mood-tracker-api/README.md#downloading-and-installing-steps)
+- [Author](https://github.com/bruna-genz/mood-tracker-api/README.md#author)
+- [Acknowledgments](https://github.com/bruna-genz/mood-tracker-api/README.md#acknowledgements)
 
-* Ruby version
+## About
 
-* System dependencies
+This application in the API for the following OhMyMood! application. It's responsible for user authentication, data storage and management.
 
-* Configuration
+Further information can be found in [this](https://github.com/bruna-genz/mood-tracker-client) repository.
 
-* Database creation
+## Built with
 
-* Database initialization
+- Ruby 2.6.5;
+- Rails 6.0.1;
 
-* How to run the test suite
+## Installation 
 
-* Services (job queues, cache servers, search engines, etc.)
+#### Prerequisites
 
-* Deployment instructions
+- Ruby
+- Rails
 
-* ...
+#### Downloading and installing steps: 
+
+To install a local version of this project , follow these steps:
+
+- Clone the repository running the following command: 
+
+```
+https://github.com/bruna-genz/mood-tracker-api.git
+```
+
+- Open the project's folder on your text editor and install the required gems by running:
+
+```
+bundle install
+```
+- Migrate the database to your machine:
+
+```
+rails db:migrate
+```
+
+- Start the server:
+
+```
+rails server
+```
+
+- The server running on ```http://localhost:3001```.
+
+## Author
+
+:woman: **Bruna Genz**
+
+- Github: [@bruna-genz](https://github.com/bruna-genz)
+- Twitter: [@Bruna_GK](https://twitter.com/Bruna_GK)
+- Linkedin: [Bruna Genz](https://www.linkedin.com/in/brunagenz/)
+- Email: brunagenz92@gmail.com
+
+
+## Acknowledgements
+- [Alejandro Sabogal](https://medium.com/@asabogal) for the amazing tutorial about React and Rails user authentication.
